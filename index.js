@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/static/css'));
 require('./routes')(app);
 require('./db')(mongoose);
 
-app.listen(port, function () {
+app.listen(process.env.PORT, function () {
 	console.log('Listening on', port);
 });
 
