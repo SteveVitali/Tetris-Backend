@@ -1,6 +1,6 @@
 module.exports = function(mongoose) {
     
-    var MONGOHQ_URI = '';
+    var MONGOHQ_URI = 'mongodb://steve:w3lp@ds061370.mongolab.com:61370/tetris';
 
     mongoose.connect(MONGOHQ_URI);
 
