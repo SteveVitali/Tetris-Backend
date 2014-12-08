@@ -8,6 +8,7 @@ exports.postSprintScore = function(req, res) {
 	});
 	newScore.save(function(err, newScore) {
 		if (err) { 
+			res.send('Error');
 			return console.log(err); 
 		}
 		console.log('Score posted successfully');
@@ -21,6 +22,7 @@ exports.getSprintScores = function(req, res) {
 	.sort({ time: 'asc' })
 	.exec( function(err, scores) {
 		if (err) {
+			res.send('Error');
 			return console.log(err);
 		}
 		res.send(scores);
