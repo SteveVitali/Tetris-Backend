@@ -16,7 +16,10 @@ exports.postSprintScore = function(req, res) {
 }
 
 exports.getSprintScores = function(req, res) {
-	models.Score.find().limit(1000).exec( function(err, scores) {
+	models.Score.find()
+	.limit(100)
+	.sort({ time: 'asc' })
+	.exec( function(err, scores) {
 		if (err) {
 			return console.log(err);
 		}
