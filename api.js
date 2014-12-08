@@ -2,8 +2,8 @@ var	models = require('./models/index');
 
 exports.postSprintScore = function(req, res) {
 	var newScore = new models.Score({
-		name: req.body.name,
-		time: req.body.time,
+		name: req.params.name,
+		time: req.params.time,
 		date: new Date()
 	});
 	newScore.save(function(err, newScore) {

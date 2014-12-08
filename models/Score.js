@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var ScoreSchema = mongoose.Schema({
-    name: String,
-    time: Number,
-    date: Date
+    name: { type: String, required: true },
+    time: { type: Number, required: true },
+    date: { type: Date  , required: true },
 });
 
 module.exports = mongoose.model('Score', ScoreSchema);
